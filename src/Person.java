@@ -8,4 +8,13 @@ public class Person {
         this.surname = surname;
         this.tickets = tickets;
     }
+
+    public boolean spendTicket() {
+        if (tickets > 0) {
+            tickets--;
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

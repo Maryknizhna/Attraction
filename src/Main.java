@@ -7,12 +7,15 @@ public class Main {
         while (!queue.isEmpty()) {
             Person person = queue.poll();
             System.out.println(person.name + " " + person.surname + " прокатился на аттракционе.");
-            person.tickets--;
+            person.spendTicket();
             if (person.tickets > 0) {
-                queue.add(person);
+                queue.offer(person);
             }
         }
     }
+
+
+
     public static List<Person> generateClients() {
         List<Person> persons = new LinkedList<>();
         persons.add(new Person("Лари", "Шварц", 10));
